@@ -49,3 +49,9 @@ def bs_delta(F,K,t,kind,iv):
     except:
         bs_delta = 0
     return bs_delta
+
+
+def StoreCSVAndPickle(df, filepath, index_bool = False):
+    df.to_csv(filepath, index = index_bool)
+    df.to_pickle(filepath)
+    return
